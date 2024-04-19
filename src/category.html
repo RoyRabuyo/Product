@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+        }
+
+        #background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        nav {
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            background-color: pink;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff99cc;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .container h1 {
+                font-size: 36px;
+            }
+            .container p {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container h1 {
+                font-size: 24px;
+            }
+            .container p {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .container h1 {
+                font-size: 20px;
+            }
+            .container p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video id="background-video" autoplay muted loop>
+        <source src="https://videos.pexels.com/video-files/11373653/11373653-uhd_3840_2138_30fps.mp4" type="video/mp4">
+     
+    </video>
+    <nav style="text-align: left; padding: 30px 40px; border-radius: 5px; background-color: pink;">
+        <ul style="list-style-type: none; padding: 0; margin: 0;">
+            <li style="display: inline-block; margin-right: 10px;"><a href="../src/index.html" style="text-decoration: none; color: black; font-weight: bold; font-family: 'Roboto', sans-serif; background-color: pink; padding: 5px 10px; border-radius: 5px;">Home</a></li>
+            <li style="display: inline-block; margin-right: 10px;"><a href="#" style="text-decoration: none; color: black; font-weight: bold; font-family: 'Roboto', sans-serif; background-color: pink; padding: 5px 10px; border-radius: 5px;">Category</a></li>
+            <li style="display: inline-block; margin-right: 10px;"><a href="../src/contact.html" style="text-decoration: none; color: black; font-weight: bold; font-family: 'Roboto', sans-serif; background-color: pink; padding: 5px 10px; border-radius: 5px;">Contact</a></li>
+            <li style="display: inline-block; margin-right: 10px;"><a href="../src/products.html" style="text-decoration: none; color: black; font-weight: bold; font-family: 'Roboto', sans-serif; background-color: pink; padding: 5px 10px; border-radius: 5px;">Products</a></li>
+        </ul>
+    </nav>
+
+
+    <nav>
+    </nav>
+    <nav>
+    </nav>
+
+    <div class="max-w-[1500px] mx-auto grid md:grid-cols-4 gap-2 rounded-xl shadow-lg py-4">
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://i.ebayimg.com/images/g/TjkAAOSwGBNiuOb9/s-l1600.jpg" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black">'Nike LeBron Witness 5 Black/Gold'</h1>
+
+            </div>
+        </div>
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://i.pinimg.com/originals/43/a8/43/43a8435f12418cf609783f8019a007d6.jpg" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-yellow-300">Under Armour Stephen Curry</h1>
+
+            </div>
+        </div>
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2020%2F04%2Fkobe-bryant-nike-mamba-fury-basketball-shoe-black-red-release-info-1.jpg?cbr=1&q=90" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black-600">Nike Quietly Debuts New Kobe Bryant Shoe</h1>
+
+            </div>
+        </div>
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://www.kickscrew.com/cdn/shop/products/main-square_4b45ba67-6356-4e38-88f6-f67d5d29b2ee_540x.png?v=1687144998" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-purple-600">Kyrie Irving ANTA Shock Wave 5 'Dark Matter'</h1>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

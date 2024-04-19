@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+        }
+
+        #background-video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        nav {
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: relative; 
+            z-index: 1; 
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            background-color: pink;
+        }
+
+        nav ul li a:hover {
+            background-color: #ff99cc;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive styling */
+        @media screen and (max-width: 768px) {
+            .container h1 {
+                font-size: 36px;
+            }
+            .container p {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container h1 {
+                font-size: 24px;
+            }
+            .container p {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .container h1 {
+                font-size: 20px;
+            }
+            .container p {
+                font-size: 12px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1500px;
+            margin: 0 auto;
+            border-radius: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .grid .shadow-xl {
+            background-color: white;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid .shadow-xl img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+        }
+
+        .grid .shadow-xl .flex {
+            padding: 1rem;
+            justify-content: space-between;
+        }
+
+        .grid .shadow-xl .flex h1 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .grid .shadow-xl .flex p {
+            font-size: 1rem;
+            background-color: orange;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+  
+    <video id="background-video" autoplay muted loop>
+        <source src="https://videos.pexels.com/video-files/11373653/11373653-uhd_3840_2138_30fps.mp4" type="video/mp4">
+    </video>
+    <nav style="text-align: left; padding: 30px 40px; border-radius: 5px; background-color: pink;">
+        <ul style="list-style-type: none; padding: 0; margin: 0;">
+            <li style="display: inline-block; margin-right: 10px;"><a href="../src/index.html" style="text-decoration: none; color: black; font-weight: bold; font-family: 'Roboto', sans-serif; background-color: pink; padding: 5px 10px; border-radius: 5px;">Home</a></li>
+            <li style="display: inline-block; margin-right: 10px;"><a href="../src/category.html" style="text-decoration: none; color: black; font-weight: bold; font-family: 'Roboto', sans-serif; background-color: pink; padding: 5px 10px; border-radius: 5px;">Category</a></li>
+            <li style="display: inline-block; margin-right: 10px;"><a href="../src/contact.html" style="text-decoration: none; color: black; font-weight: bold; font-family: 'Roboto', sans-serif; background-color: pink; padding: 5px 10px; border-radius: 5px;">Contact</a></li>
+            <li style="display: inline-block; margin-right: 10px;"><a href="#" style="text-decoration: none; color: black; font-weight: bold; font-family: 'Roboto', sans-serif; background-color: pink; padding: 5px 10px; border-radius: 5px;">Products</a></li>
+        </ul>
+    </nav>
+
+    <div class="max-w-[1500px] mx-auto grid md:grid-cols-4 gap-2 rounded-xl shadow-lg py-4">
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/11ecc97e-3e85-4cc5-8227-c68c9b39a878/air-jordan-3-retro-green-glow-shoes-TJf2lm.png" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black-600">Air Jordan 3 Retro 'Green Glow'</h1>
+                <p class="text-base bg-orange-500 text-white px-2 rounded">₱11,295</p>
+            </div>
+        </div>
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/82fbf807-af52-47ca-96bd-a5fd59dbbbd2/air-jordan-3-retro-shoes-TJf2lm.png" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black-600">Air Jordan 3 Retro</h1>
+                <p class="text-base bg-orange-500 text-white px-2 rounded">₱11,295</p>
+            </div>
+        </div>
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e5b1fb1f-c9f1-420e-8a9b-efc4dbadd44b/air-jordan-1-low-se-shoes-L9LvW5.png" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black-600">Air Jordan 1 Low SE</h1>
+                <p class="text-base bg-orange-500 text-white px-2 rounded">₱6,895</p>
+            </div>
+        </div>
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a6fb5e94-9781-4138-a94b-b8ea2252b1fe/air-jordan-3-retro-shoes-TJf2lm.png" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black-600">Air Jordan 3 Retro</h1>
+                <p class="text-base bg-orange-500 text-white px-2 rounded">₱9,445</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="max-w-[1500px] mx-auto grid md:grid-cols-4 gap-2 rounded-xl shadow-lg py-4">
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/11ecc97e-3e85-4cc5-8227-c68c9b39a878/air-jordan-3-retro-green-glow-shoes-TJf2lm.png" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black-600">Air Jordan 3 Retro 'Green Glow'</h1>
+                <p class="text-base bg-orange-500 text-white px-2 rounded">₱11,295</p>
+            </div>
+        </div>
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/82fbf807-af52-47ca-96bd-a5fd59dbbbd2/air-jordan-3-retro-shoes-TJf2lm.png" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black-600">Air Jordan 3 Retro</h1>
+                <p class="text-base bg-orange-500 text-white px-2 rounded">₱11,295</p>
+            </div>
+        </div>
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e5b1fb1f-c9f1-420e-8a9b-efc4dbadd44b/air-jordan-1-low-se-shoes-L9LvW5.png" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black-600">Air Jordan 1 Low SE</h1>
+                <p class="text-base bg-orange-500 text-white px-2 rounded">₱6,895</p>
+            </div>
+        </div>
+        <div class="shadow-xl rounded-xl">
+            <img class="max-h-[190px] w-full h-full object-cover rounded-xl" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a6fb5e94-9781-4138-a94b-b8ea2252b1fe/air-jordan-3-retro-shoes-TJf2lm.png" alt="">
+            <div class="flex flex-wrap justify-between p-4">
+                <h1 class="text-1xl font-bold text-black-600">Air Jordan 3 Retro</h1>
+                <p class="text-base bg-orange-500 text-white px-2 rounded">₱9,445</p>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
